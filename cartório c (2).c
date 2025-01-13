@@ -2,19 +2,19 @@
 #include  <stdlib.h> //biblioteca de espaço e alocação em memória
 #include  <locale.h> //biblioteca de alocação de texto por região
 #include  <string.h> //biblioteca rfesponsável por cuidar das string
-int registro()
+int registro() // função responsável por cadastrar os usuários no sistema
 {
     printf("voce escolheu o resgistro de nomes!\n");
     system("pause");
-
+    // inicio da criação de variáveis/string
 	char arquivo[40];
 	char cpf[40];
 	char nome[40];
 	char sobrenome [40];
 	char cargo[40];
-	
-	printf("digite o cpf a ser cadastrado!\n");
-	scanf("%s" , cpf);
+	//final da criação de variáveis/string
+	printf("digite o cpf a ser cadastrado!\n"); //coletando informações do usuário
+	scanf("%s" , cpf); // % refere-se a string
 	
 	strcpy(arquivo , cpf); // responsável por copiar os valores das string
 	
@@ -127,6 +127,7 @@ int main()
 	printf("\t1 - Registrar nomes!\n");
 	printf("\t2 - Consultar nomes!\n");
 	printf("\t3 - Deletar nomes!\n");
+	printf("\t4 - Sair do sistema \n\n");
 	
 	printf("opcao: "); //fim do menu
 	
@@ -146,6 +147,11 @@ int main()
 		
 		case 3:
 	    deletar();
+	    break;
+	    
+	    case 4:
+	    printf ("Obrigado por utilizar o sistema!\n");
+	    return 0;
 	    break;
 	    
 	    default:
